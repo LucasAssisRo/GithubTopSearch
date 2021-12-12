@@ -50,7 +50,10 @@ final class RepositoriesViewController: UIViewController {
         disposeBag = .init(
             disposing: [
                 viewModel.repositories.drive { [weak self] in
-                    self?.dataSource = $0.map(RepositoryItem.item)
+                    // The API returns duplicate results sometimes.
+                    self?.dataSource = Array(Set($0))
+                        .sorted { $0.stargazers_count > $1.stargazers_count }
+                        .map(RepositoryItem.item)
                 },
                 viewModel.requestAvailable.drive { [weak self] in self?.canRequest = $0 },
                 viewModel.limitReached.emit(onNext: { [weak self] in self?.presentLimitReachedAlert() }),
