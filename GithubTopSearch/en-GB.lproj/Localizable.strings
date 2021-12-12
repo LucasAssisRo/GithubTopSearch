@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  GithubTopSearch
+
+  Created by Lucas Assis Rodrigues on 11.12.21.
+  
+*/
+
+"main.no_description" = "No description";
+"main.not_specified" = "Not specified";
+"main.forks.singular" = "%1d fork";
+"main.forks.plural" = "%1d forks";
+"main.stars.singular" = "%1d star";
+"main.stars.plural" = "%1d stars";
+"repository.detail.created_at" = "%1@ at %2@";

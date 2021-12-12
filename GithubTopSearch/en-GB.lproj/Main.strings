@@ -1,0 +1,81 @@
+
+/* Class = "UIButton"; normalTitle = "Go to Github"; ObjectID = "10n-SG-pp7"; */
+"10n-SG-pp7.normalTitle" = "Go to Github";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "15m-HH-4Yu"; */
+"15m-HH-4Yu.text" = "5";
+
+/* Class = "UINavigationController"; title = "Favorites"; ObjectID = "4br-7K-Leh"; */
+"4br-7K-Leh.title" = "Favourites";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5B1-p5-43e"; */
+"5B1-p5-43e.text" = "Label";
+
+/* Class = "UISegmentedControl"; 7Iz-JC-yIo.segmentTitles[0] = "Day"; ObjectID = "7Iz-JC-yIo"; */
+"7Iz-JC-yIo.segmentTitles[0]" = "Day";
+
+/* Class = "UISegmentedControl"; 7Iz-JC-yIo.segmentTitles[1] = "Week"; ObjectID = "7Iz-JC-yIo"; */
+"7Iz-JC-yIo.segmentTitles[1]" = "Week";
+
+/* Class = "UISegmentedControl"; 7Iz-JC-yIo.segmentTitles[2] = "Month"; ObjectID = "7Iz-JC-yIo"; */
+"7Iz-JC-yIo.segmentTitles[2]" = "Month";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Cve-9M-Rbh"; */
+"Cve-9M-Rbh.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Repositories"; ObjectID = "HlV-Ub-L38"; */
+"HlV-Ub-L38.title" = "Repositories";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "IDb-B2-QTj"; */
+"IDb-B2-QTj.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NaN-ZL-bYV"; */
+"NaN-ZL-bYV.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "NcT-zt-4je"; */
+"NcT-zt-4je.text" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SZT-Xj-zBF"; */
+"SZT-Xj-zBF.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Favorites"; ObjectID = "Vyy-l9-DXK"; */
+"Vyy-l9-DXK.title" = "Favourites";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "WUy-GG-brt"; */
+"WUy-GG-brt.text" = "Title";
+
+/* Class = "UIViewController"; title = "Favorites"; ObjectID = "Z7f-BI-k0K"; */
+"Z7f-BI-k0K.title" = "Favourites";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "blZ-nH-tCh"; */
+"blZ-nH-tCh.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "chd-Bb-6xZ"; */
+"chd-Bb-6xZ.text" = "Title";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "d0T-hz-VlA"; */
+"d0T-hz-VlA.text" = "5";
+
+/* Class = "UINavigationController"; title = "Repositories"; ObjectID = "gyg-Xk-tEQ"; */
+"gyg-Xk-tEQ.title" = "Repositories";
+
+/* Class = "UITabBarItem"; title = "Repositories"; ObjectID = "hQK-DX-ZBo"; */
+"hQK-DX-ZBo.title" = "Repositories";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "mXg-Rv-ekx"; */
+"mXg-Rv-ekx.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Favorites"; ObjectID = "nIc-Mh-6qK"; */
+"nIc-Mh-6qK.title" = "Favourites";
+
+/* Class = "UILabel"; text = "No Favorites"; ObjectID = "nMQ-h1-uvz"; */
+"nMQ-h1-uvz.text" = "No favourites";
+
+/* Class = "UILabel"; text = "No results"; ObjectID = "tYu-ge-GYJ"; */
+"tYu-ge-GYJ.text" = "No results";
+
+/* Class = "UISearchBar"; placeholder = "Search"; ObjectID = "twV-dA-4Pt"; */
+"twV-dA-4Pt.placeholder" = "Search";
+
+/* Class = "UIViewController"; title = "Repositories"; ObjectID = "vZJ-fa-AOJ"; */
+"vZJ-fa-AOJ.title" = "Repositories";
