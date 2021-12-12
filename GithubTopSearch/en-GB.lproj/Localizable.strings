@@ -13,3 +13,6 @@
 "main.stars.singular" = "%1d star";
 "main.stars.plural" = "%1d stars";
 "repository.detail.created_at" = "%1@ at %2@";
+"alert.limit_reached.title" = "Limit Reached";
+"alert.limit_reached.message" = "Please wait a minute before requesting more repositories";
+"main.ok" = "OK";

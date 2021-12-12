@@ -36,6 +36,7 @@ extension SearchCollectionReusableView: UISearchBarDelegate {
     }
 
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        guard searchBar.text?.isEmpty != false else { return }
         didTypeSearch?(searchBar.text)
     }
 

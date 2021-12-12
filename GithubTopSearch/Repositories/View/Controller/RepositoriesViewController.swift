@@ -16,6 +16,8 @@ final class RepositoriesViewController: UIViewController {
     var viewModel: RepositoriesViewModel = LiveRepositoriesViewModel()
     private var disposeBag: DisposeBag?
 
+    private var canRequest = true
+
     var dataSource: [RepositoryItem] = [] {
         didSet {
             setEmptyLabelVisibility()
@@ -24,6 +26,8 @@ final class RepositoriesViewController: UIViewController {
     }
 
     var diffableDataSource: RepositoryDiffableDataSource!
+
+    private var canFetchMoreFromScroll = true
 
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var emptyLabel: UILabel!
@@ -43,11 +47,15 @@ final class RepositoriesViewController: UIViewController {
             return header
         }
 
-        disposeBag = .init {
-            viewModel.repositories.drive { [weak self] in
-                self?.dataSource = $0.map(RepositoryItem.item)
-            }
-        }
+        disposeBag = .init(
+            disposing: [
+                viewModel.repositories.drive { [weak self] in
+                    self?.dataSource = $0.map(RepositoryItem.item)
+                },
+                viewModel.requestAvailable.drive { [weak self] in self?.canRequest = $0 },
+                viewModel.limitReached.emit(onNext: { [weak self] in self?.presentLimitReachedAlert() }),
+            ]
+        )
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -74,6 +82,16 @@ final class RepositoriesViewController: UIViewController {
     @IBAction func clearSearch(_ sender: UIBarButtonItem) {
         viewModel.query = nil
     }
+
+    private func presentLimitReachedAlert() {
+        let alert = UIAlertController(
+            title: "alert.limit_reached.title".localized,
+            message: "alert.limit_reached.message".localized,
+            preferredStyle: .alert
+        )
+        alert.addAction(.init(title: "main.ok".localized, style: .cancel, handler: nil))
+        present(alert, animated: true)
+    }
 }
 
 // MARK: - RepositoriesViewController + UICollectionViewDelegate
@@ -88,4 +106,14 @@ extension RepositoriesViewController: UICollectionViewDelegate {
 
 extension RepositoriesViewController: RepositoryCollection {
     var hasSectionHeader: Bool { true }
+}
+
+// MARK: - RepositoriesViewController + UIScrollViewDelegate
+
+extension RepositoriesViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard canRequest, scrollView.contentSize.height - scrollView.contentOffset.y > 50
+        else { return }
+        viewModel.requestRepositories()
+    }
 }
